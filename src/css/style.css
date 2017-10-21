@@ -1,0 +1,13 @@
+/* Pomodoro Clock Styles */
+
+body {
+    background-color: ##fdf3e7;    
+}
+
+h1 {
+    text-align: center;
+}
+
+#clock {
+    text-align: center;
+}
