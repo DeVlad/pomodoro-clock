@@ -9,5 +9,24 @@ h1 {
 }
 
 #clock {
+    
+    padding: 5px;  
+    font-size: 100px;
     text-align: center;
+   /* border: 2px solid black; */
+    
+}
+
+#start {
+    border: 2px solid aquamarine;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+.center {
+    margin: auto;
+    width: 50%;    
+    padding: 10px;
 }
