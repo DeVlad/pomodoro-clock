@@ -12,22 +12,18 @@
 
 <body>
     <h1>Pomodoro</h1>
+    <p class="settings">Session
+        <input type="number" class="settings" size="2" min="1" max="60" id="session-duration" name="session" value="25" /></p>
+    <p class="settings">Break
+        <input type="number" class="settings" size="2" min="5" max="20" id="break-duration" name="session" value='5' /></p><br>
     <button id="start" onclick="startPomodoro(10)">start</button>
-    <p>Session
-        <p>
-            <input type='number' size='2' min="1" max="60" id='session-duration' name='session' value='25' />
-            <p>Break</p>
-            <input type='number' size='2' min="5" max="20" id='break-duration' name='session' value='5' />
-            
 
-            <div id="clock">00:00</div>
+    <div id="clock">00:00</div>
 
-
-            <div class="content"></div>
-            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-            <!-- build:js js/twitch.min.js -->
-            <script src="js/pomodoro.js" type="text/javascript"></script>
-            <!-- /build -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <!-- build:js js/twitch.min.js -->
+    <script src="js/pomodoro.js" type="text/javascript"></script>
+    <!-- /build -->
 </body>
 
 </html>
