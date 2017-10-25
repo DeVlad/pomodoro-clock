@@ -10,6 +10,7 @@ function counter(d) {
     if(count >= duration) {
         // Stop timer
         clearInterval(timer);
+        playAudio();
     }    
     document.getElementById('clock').innerHTML = '<p>' + displayTime(count) + '</p>';
 }
@@ -29,3 +30,9 @@ function startPomodoro(d) {
     duration = d;
     timer = setInterval(counter, 1000);
 }
+
+var beep = document.getElementById("alarm-beep"); 
+
+function playAudio() { 
+    beep.play(); 
+} 
