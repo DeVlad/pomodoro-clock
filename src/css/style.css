@@ -22,16 +22,19 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: ##fdf3e7;
+    background-color: #7B1FA2;
+    color: #FFFFFF;
+    font-family: roboto;
+    font-weight: 200;
 }
 
-h1 {
+h1 {    
     font-size: 40px;
     text-align: center;
     margin-bottom: 40px;
 }
 
-#clock {
+#clock {    
     display: block;    
     font-size: 100px;
     text-align: center;
@@ -40,6 +43,7 @@ h1 {
 }
 
 #start {
+    
     margin-top: 40px;
     border: 1px solid gray;
     text-align: center;
@@ -47,8 +51,30 @@ h1 {
     cursor: pointer;
 }
 
+.color-pink {
+    background-color: #FF4081;
+}
+
+#status {
+    font-size: 26px;
+    text-align: center;
+    
+}
+
 span {
     padding-right: 8px;
+}
+
+/* Remove right side arrow buttons */
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+    
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    border-bottom: none;
 }
 
 
