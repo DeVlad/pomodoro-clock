@@ -6,9 +6,6 @@ var rest = 5; //max break 20 min
 var timer;
 var restStarted = false;
 
-// TODO: Progress bar
-document.getElementById('progress-bar').style.width = '33%';
-
 // Start timer
 function startPomodoro(d) {
     document.getElementById('start').onclick = 'stopPomodoro()';
@@ -55,14 +52,12 @@ function counter(d) {
         // Stop timer
         clearInterval(timer);       
     }  
+    // Percentage of completion
+    var poc = Math.floor((count / duration) * 100);    
     
     document.getElementById('clock').innerHTML = '<p>' + displayTime(count) + '</p>';
+    document.getElementById('progress-bar').style.width = poc + '%';
 }
-
-// TODO: break session progress bar
-/*function breakProgressBar {
-    
-}*/
 
 // Audio alarm 
 var beep = document.getElementById("alarm-beep");
