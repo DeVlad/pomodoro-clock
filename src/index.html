@@ -15,10 +15,11 @@
 <body>
     <div class="container">
         <h1>Pomodoro</h1>
-        <div id="status">&nbsp;</div>
+        
         <div id="clock">00:00</div>
+        <div id="status">&nbsp;</div>
         <div class="row">
-            <div class="col s4 offset-s4">
+            <div class="col s12 m4 l4 xl4 offset-m4 offset-l4 offset-xl4">
                 <div class="progress">
                     <div id="progress-bar" class="determinate" style="width: 0%"></div>
                 </div>
@@ -29,15 +30,15 @@
     <div class="container center-align">
         <p class=""><span>Session</span></p>
         <div class="row">
-            <div class="col s4 right-align"> <a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">+</i></a></div>
-            <div class="col s4"><input type="number" class="center-align settings" size="2" min="1" max="60" id="session-duration" name="session" value="25" /></div>
-            <div class="col s4 left-align"><a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">-</i></a></div>
+            <div class="col s4 m1 offset-m4 right-align"> <a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">+</i></a></div>
+            <div class="col s4 m2 center-align"><input type="number" class="center-align settings" size="2" min="1" max="60" id="session-duration" name="session" value="25" /></div>
+            <div class="col s4 m1 left-align"><a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">-</i></a></div>
         </div>
         <p><span>Break</span></p>
         <div class="row">
-            <div class="col s4 right-align"> <a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">+</i></a></div>
-            <div class="col s4"><input type="number" class="center-align settings" size="2" min="5" max="20" id="break-duration" name="session" value='5' /></div>
-            <div class="col s4 left-align"><a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">-</i></a></div>
+            <div class="col s4 m1 offset-m4 right-align"> <a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">+</i></a></div>
+            <div class="col s4 m2 center-align"><input type="number" class="center-align settings" size="2" min="5" max="20" id="break-duration" name="session" value='5' /></div>
+            <div class="col s4 m1 left-align"><a class="btn-floating btn-small waves-effect waves-light color-pink"><i class="material-icons">-</i></a></div>
         </div>
         <button id="start" class="waves-effect waves-light btn-large color-pink" onclick="startPomodoro(10)">start</button>
     </div>

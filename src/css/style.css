@@ -1,5 +1,6 @@
 /* Pomodoro Clock Styles */
 
+/* CSS reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,37 +29,28 @@ body {
     font-weight: 200;
 }
 
-h1 {    
+h1 {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 40px;
+    
 }
 
-#clock {    
+#clock {
     display: block;    
     font-size: 100px;
-    text-align: center;
-    margin-bottom: 40px;
-    /* border: 2px solid black; */
+    text-align: center;   
 }
 
 #start {
-    
-    margin-top: 40px;
-    border: 1px solid gray;
     text-align: center;
     font-size: 30px;    
     cursor: pointer;
 }
 
-.color-pink {
-    background-color: #FF4081;
-}
-
+/* Session status message display*/
 #status {
     font-size: 26px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 span {
@@ -69,12 +61,13 @@ span {
 input::-webkit-inner-spin-button, 
 input::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
-  margin: 0;
-    
+  margin: 0;    
 }
 
 input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
     border-bottom: none;
 }
 
-
+.color-pink {
+    background-color: #FF4081;
+}
