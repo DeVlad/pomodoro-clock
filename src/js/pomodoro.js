@@ -40,7 +40,7 @@ function counter() {
 }
 
 // Start timer
-function startPomodoro() {    
+function startPomodoro() {
     duration = document.getElementById('session-duration').value; // TODO: * 60 sec
     rest = document.getElementById('break-duration').value; // * 60 sec
     timer = setInterval(counter, 1000);
@@ -99,6 +99,32 @@ function resetPomodoro() {
     document.getElementById('status').innerHTML = '<h2>&nbsp;<h2>';
 }
 
-document.getElementById("").addEventListener("click", function(){
-    document.getElementById("demo").innerHTML = "Hello World";
+// Events
+// TODO: mousedown
+document.getElementById("session-plus").addEventListener("click", function () {
+    var val = document.getElementById('session-duration').value;
+    if (val < 60) {
+        document.getElementById('session-duration').value ++;
+    }
+});
+
+document.getElementById("session-minus").addEventListener("click", function () {
+    var val = document.getElementById('session-duration').value;
+    if (val < 60 && val > 1) {
+        document.getElementById('session-duration').value --;
+    }
+});
+
+document.getElementById("break-plus").addEventListener("click", function () {
+    var val = document.getElementById('break-duration').value;
+    if (val < 60) {
+        document.getElementById('break-duration').value ++;
+    }
+});
+
+document.getElementById("break-minus").addEventListener("click", function () {
+    var val = document.getElementById('break-duration').value;
+    if (val < 60 && val > 1) {
+        document.getElementById('break-duration').value --;
+    }
 });
