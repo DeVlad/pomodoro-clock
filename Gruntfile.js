@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/js/babel/*.js',
+                src: 'src/js/*.js',
                 dest: 'build/js/<%= pkg.name %>.min.js'
             }
         },
@@ -84,34 +84,17 @@ module.exports = function (grunt) {
                 }
             }
         },
-        babel: {
-            options: {
-                sourceMap: true,
-                presets: ['babel-preset-es2015']
-            },
-            dist: {
-                files: {
-                    'src/js/babel/twitch.js': 'src/js/twitch.js'
-                }
-            }
-        },
+        
         copy: {
             main: {
                 files: [
       // includes files within path
                     {
                         expand: true,
-                        cwd: 'src/img',
+                        cwd: 'src/sound',
                         src: ['**'],
-                        dest: 'build/img/'
-                    },
-
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: ['favicon.ico'],
-                        dest: 'build/'
-                    }
+                        dest: 'build/sound/'
+                    }                    
                     
       // includes files within path and its sub-directories
      // {expand: true, src: ['path/**'], dest: 'dest/'},
@@ -147,5 +130,5 @@ module.exports = function (grunt) {
     //grunt.loadNpmTasks('babel');
     // Default tasks
     //grunt.registerTask('default', ['auto_install', 'validation', 'uglify', 'postcss', 'processhtml', 'htmlmin', 'copy']);
-    grunt.registerTask('default', ['auto_install', 'validation', 'babel', 'uglify', 'postcss', 'processhtml', 'htmlmin']);
+    grunt.registerTask('default', ['auto_install', 'validation', 'uglify', 'postcss', 'processhtml', 'htmlmin', 'copy']);
 };

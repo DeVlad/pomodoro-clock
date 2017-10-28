@@ -57,16 +57,20 @@ span {
     padding-right: 8px;
 }
 
-/* Remove right side arrow buttons */
+/* Remove spinners (right side arrow buttons) */
 input::-webkit-inner-spin-button, 
 input::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0;    
 }
 
-input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-    border-bottom: none;
+input[type=number] {
+    -moz-appearance: textfield;
 }
+
+/*input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    border-bottom: none;
+}*/
 
 .color-pink {
     background-color: #FF4081;
