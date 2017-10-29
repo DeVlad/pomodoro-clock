@@ -31,8 +31,7 @@ body {
 
 h1 {
     font-size: 40px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 #clock {
@@ -50,7 +49,7 @@ h1 {
 /* Session status message display*/
 #status {
     font-size: 26px;
-    text-align: center;    
+    text-align: center;
 }
 
 span {
@@ -68,10 +67,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-/*input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-    border-bottom: none;
-}*/
-
+/* Color classes */
 .color-pink {
     background-color: #FF4081;
 }

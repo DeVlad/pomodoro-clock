@@ -41,8 +41,8 @@ function counter() {
 
 // Start timer
 function startPomodoro() {
-    duration = document.getElementById('session-duration').value; // TODO: * 60 sec
-    rest = document.getElementById('break-duration').value; // * 60 sec
+    duration = document.getElementById('sessionDuration').value; // TODO: * 60 sec
+    rest = document.getElementById('breakDuration').value; // * 60 sec
     timer = setInterval(counter, 1000);
     document.getElementById('start').setAttribute('onClick', 'resetPomodoro()');
     document.getElementById('start').innerHTML = 'RESET';
@@ -102,29 +102,42 @@ function resetPomodoro() {
 // Events
 // TODO: mousedown
 document.getElementById("session-plus").addEventListener("click", function () {
-    var val = document.getElementById('session-duration').value;
+    var val = document.getElementById('sessionDuration').value;
     if (val < 60) {
-        document.getElementById('session-duration').value ++;
+        document.getElementById('sessionDuration').value++;
     }
 });
 
 document.getElementById("session-minus").addEventListener("click", function () {
-    var val = document.getElementById('session-duration').value;
-    if (val < 60 && val > 1) {
-        document.getElementById('session-duration').value --;
+    var val = document.getElementById('sessionDuration').value;
+    if (val <= 60 && val > 1) {
+        document.getElementById('sessionDuration').value--;
     }
 });
 
 document.getElementById("break-plus").addEventListener("click", function () {
-    var val = document.getElementById('break-duration').value;
+    var val = document.getElementById('breakDuration').value;
     if (val < 60) {
-        document.getElementById('break-duration').value ++;
+        document.getElementById('breakDuration').value++;
     }
 });
 
 document.getElementById("break-minus").addEventListener("click", function () {
-    var val = document.getElementById('break-duration').value;
-    if (val < 60 && val > 1) {
-        document.getElementById('break-duration').value --;
+    var val = document.getElementById('breakDuration').value;
+    if (val <= 60 && val > 1) {
+        document.getElementById('breakDuration').value--;
     }
 });
+
+// User input validation
+sessionDuration.onchange = sessionDuration.onfocusout = validateInput;
+sessionDuration.onchange = sessionDuration.onmouseout = validateInput;
+breakDuration.onchange = breakDuration.onfocusout = validateInput;
+breakDuration.onchange = breakDuration.onmouseout = validateInput;
+
+function validateInput() {
+    if (!/^([0-9]{1,2})$/.test(this.value) || this.value > 60) {
+        this.value = 1;
+        //console.log('not pass!');
+    }
+}
